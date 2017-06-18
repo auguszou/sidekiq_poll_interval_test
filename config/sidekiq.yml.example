@@ -1,0 +1,12 @@
+---
+:tag: Bindo Play Job
+:concurrency: 5
+:require: ./boot_sidekiq.rb
+:logfile: ./log/sidekiq.log
+:pidfile: ./tmp/pids/sidekiq.pid
+staging:
+  :concurrency: 5
+production:
+  :concurrency: 8
+:queues:
+  [bindo_play_job, 5]
